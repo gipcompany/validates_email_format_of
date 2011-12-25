@@ -1,7 +1,7 @@
 validates_email_format_of
 ======================
 
-A plugin validates format of email and blacklist some domains.
+A plugin for validate format of email and blacklist some domains.
 
 Installation
 ------------
