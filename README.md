@@ -26,6 +26,13 @@ Or
 		validates_email_format_of :email
 	end
 	
-For blacklist some domains:
+For blacklist some domains add in a initializer:
 
 	EmailValidator.blacklist_domains = ['yopmail.com', 'jetable.org']
+
+
+I18n support
+------------
+
+* `errors.messages.not_an_email_adress` is used for an invalid format
+* `errors.messages.not_a_valid_email_adress` is used for an invalid domain
