@@ -5,7 +5,7 @@ class EmailValidator < ActiveModel::EachValidator
 	cattr_accessor :whitelist_domains
 
 	def validate_each(record, attribute, value)
-		value = values.to_s.downcase
+		value = value.to_s.downcase
 		unless value =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
 			record.errors[attribute] << (options[:message] || I18n.t('errors.messages.not_an_email_adress'))
 		end
