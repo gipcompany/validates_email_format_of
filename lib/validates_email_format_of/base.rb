@@ -1,10 +1,8 @@
 module ActiveRecord; module Acts; end; end
 module ActiveRecord::Acts::ValidatesFormatEmailOf
   
-  def self.included(klass)
-		klass.class_eval do
-			extend(ClassMethods)
-		end
+  def self.included(base)
+		base.extend(ClassMethods)
   end
 	
   module ClassMethods
