@@ -1,6 +1,8 @@
 class EmailValidator < ActiveModel::EachValidator
 	@@blacklist_domains = []
+	@@whitelist_domains = []
 	cattr_accessor :blacklist_domains
+	cattr_accessor :whitelist_domains
 
 	def validate_each(record, attribute, value)
 		value = values.to_s.downcase
@@ -10,6 +12,9 @@ class EmailValidator < ActiveModel::EachValidator
 		if (blacklist_domains.size > 0 && (value =~ /#{blacklist_domains.join('|')}$/))
 			record.errors[attribute] << (options[:message] || I18n.t('errors.messages.not_a_valid_email_adress'))
 		end
+		if (whitelist_domains.size > 0 && !(value =~ /#{whitelist_domains.join('|')}$/))
+			record.errors[attribute] << (options[:message] || I18n.t('errors.messages.not_a_valid_email_adress'))
+		end		
 	end
 	
 end

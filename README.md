@@ -1,7 +1,7 @@
 validates_email_format_of
 ======================
 
-A plugin for validate format of email and blacklist some domains.
+A plugin for validate format of email and blacklist or whitelist some domains.
 
 Installation
 ------------
@@ -29,6 +29,7 @@ Or
 For blacklist some domains add in a initializer:
 
 	EmailValidator.blacklist_domains = ['yopmail.com', 'jetable.org']
+	EmailValidator.whitelist_domains = ['gmail.com', 'hotmail.com']
 
 
 I18n support
