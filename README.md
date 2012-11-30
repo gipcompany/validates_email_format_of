@@ -26,7 +26,7 @@ Or
 		validates_email_format_of :email
 	end
 	
-For blacklist some domains add in a initializer:
+For blacklist or whitelist some domains add in a initializer:
 
 	EmailValidator.blacklist_domains = ['yopmail.com', 'jetable.org']
 	EmailValidator.whitelist_domains = ['gmail.com', 'hotmail.com']
@@ -37,3 +37,8 @@ I18n support
 
 * `errors.messages.not_an_email_adress` is used for an invalid format
 * `errors.messages.not_a_valid_email_adress` is used for an invalid domain
+
+Warning
+-------
+
+This plugin downcase your email.
