@@ -8,7 +8,7 @@ Installation
 
 Include the gem in your Gemfile:
 
-    gem 'validates_email_format_of', :git => 'https://github.com/eviljojo22/validates_email_format_of'
+    gem 'validates_email_format_of', :git => 'https://github.com/jonathantribouharet/validates_email_format_of'
 
 
 Usage
