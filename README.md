@@ -37,3 +37,9 @@ I18n support
 
 * `errors.messages.not_an_email_adress` is used for an invalid format
 * `errors.messages.not_a_valid_email_adress` is used for an invalid domain
+
+
+Warning
+-------
+
+The validation downcase the email.
